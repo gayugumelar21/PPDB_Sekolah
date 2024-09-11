@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Agu 2024 pada 09.17
+-- Waktu pembuatan: 11 Sep 2024 pada 05.37
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -36,6 +36,13 @@ CREATE TABLE `abouts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `abouts`
+--
+
+INSERT INTO `abouts` (`id`, `title`, `desc`, `image`, `is_active`, `created_at`, `updated_at`) VALUES
+(2, 'test about', 'test about', 'foto_diri/1725329621_about.jpg', '0', '2024-09-02 19:13:41', '2024-09-02 19:13:41');
 
 -- --------------------------------------------------------
 
@@ -256,8 +263,7 @@ CREATE TABLE `beritas` (
 --
 
 INSERT INTO `beritas` (`id`, `title`, `slug`, `content`, `kategori_id`, `thumbnail`, `is_active`, `created_by`, `created_at`, `updated_at`) VALUES
-(1, 'Judul Berita 1', 'judul-berita-1', 'Deskripsi berita satu', 1, '1716632860_WhatsApp Image 2024-05-25 at 14.04.46.jpeg', '0', 1, '2024-05-15 20:31:10', '2024-05-25 03:27:40'),
-(2, 'Judul Berita 2', 'judul-berita-2', 'Deskripsi berita dua', 1, '1716632886_WhatsApp Image 2024-05-25 at 14.04.47 (2).jpeg', '0', 1, '2024-05-15 22:01:16', '2024-05-25 03:28:06');
+(4, 'test berita', 'test-berita', 'test test', 1, 'foto_diri/1724814656_berita.jpg', '0', 1, '2024-08-27 20:10:56', '2024-08-27 20:10:56');
 
 -- --------------------------------------------------------
 
@@ -372,6 +378,19 @@ CREATE TABLE `data_murids` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `data_murids`
+--
+
+INSERT INTO `data_murids` (`id`, `user_id`, `nis`, `nisn`, `tempat_lahir`, `tgl_lahir`, `agama`, `telp`, `whatsapp`, `alamat`, `asal_sekolah`, `proses`, `created_at`, `updated_at`) VALUES
+(4, 7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Pendaftaran', '2024-09-06 19:07:53', '2024-09-06 19:07:53'),
+(5, 8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Pendaftaran', '2024-09-06 19:14:06', '2024-09-06 19:14:06'),
+(6, 9, NULL, NULL, NULL, NULL, NULL, NULL, '1234', NULL, 'test', 'Pendaftaran', '2024-09-07 21:03:00', '2024-09-07 21:03:00'),
+(7, 10, NULL, NULL, NULL, NULL, NULL, NULL, '21313', NULL, 'test', 'Pendaftaran', '2024-09-07 23:16:00', '2024-09-07 23:16:00'),
+(8, 11, NULL, NULL, NULL, NULL, NULL, NULL, '3121', NULL, 'test', 'Pendaftaran', '2024-09-07 23:20:40', '2024-09-07 23:20:40'),
+(9, 12, NULL, NULL, NULL, NULL, NULL, NULL, '32131', NULL, 'test', 'Pendaftaran', '2024-09-07 23:38:21', '2024-09-07 23:38:21'),
+(10, 13, NULL, NULL, NULL, NULL, NULL, NULL, '3213123', NULL, 'test', 'Pendaftaran', '2024-09-07 23:59:27', '2024-09-07 23:59:27');
+
 -- --------------------------------------------------------
 
 --
@@ -444,8 +463,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `title`, `desc`, `slug`, `content`, `thumbnail`, `acara`, `lokasi`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 'Judul Event 1', 'Deskripsi singkat event 1', 'judul-event-1', 'Isi content event 1', '1715835635_event1.jpg', '2024-05-16 12:00:00', 'SDN 6 Jagaraga Oku', '0', '2024-05-15 20:33:27', '2024-05-15 22:00:35'),
-(2, 'Judul Event 2', 'test', 'judul-event-2', 'Isi content event 2', '1715835735_event2.jpg', '2024-05-16 12:03:00', 'SDN 6 Jagaraga Oku', '1', '2024-05-15 22:02:15', '2024-05-15 22:03:21');
+(12, 'test event 1', 'test event 1', 'test-event-1', 'test event 1', 'foto_diri/1725327899_event.jpg', '2024-09-03 08:44:00', 'test event 1', '0', '2024-09-02 18:44:59', '2024-09-02 18:44:59');
 
 -- --------------------------------------------------------
 
@@ -506,8 +524,7 @@ CREATE TABLE `image_sliders` (
 --
 
 INSERT INTO `image_sliders` (`id`, `image`, `title`, `desc`, `urutan`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, '1716632529_WhatsApp Image 2024-05-25 at 14.04.58.jpeg', 'Slider 1', 'Ini Deskripsi Slider 1', 0, '0', '2024-05-15 20:14:07', '2024-05-25 03:22:10'),
-(2, '1716632579_WhatsApp Image 2024-05-25 at 14.04.48.jpeg', 'Slider 2', 'Ini Deskripsi Slider 2', 1, '0', '2024-05-15 20:15:27', '2024-05-25 03:22:59');
+(5, '1725331039_1715835511_slider1.jpg', 'test 1', 'test 1', 0, '0', '2024-09-02 19:37:19', '2024-09-02 19:37:19');
 
 -- --------------------------------------------------------
 
@@ -682,7 +699,14 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (2, 'App\\Models\\User', 4),
 (4, 'App\\Models\\User', 2),
 (4, 'App\\Models\\User', 6),
-(7, 'App\\Models\\User', 5);
+(4, 'App\\Models\\User', 8),
+(4, 'App\\Models\\User', 9),
+(7, 'App\\Models\\User', 5),
+(7, 'App\\Models\\User', 7),
+(7, 'App\\Models\\User', 10),
+(7, 'App\\Models\\User', 11),
+(7, 'App\\Models\\User', 12),
+(7, 'App\\Models\\User', 13);
 
 -- --------------------------------------------------------
 
@@ -801,7 +825,7 @@ CREATE TABLE `persyaratanppdb` (
 --
 
 INSERT INTO `persyaratanppdb` (`id`, `nama`, `jenis_kelamin`, `created_at`, `updated_at`, `status_siswa`, `nama_panggilan`, `tempat_lahir`, `tanggal_lahir`, `agama`, `anak_ke`, `dari_bersaudara`, `status_anak`, `alamat`, `no_hp`, `nama_sekolah`, `alamat_sekolah`, `nama_lengkap_ayah`, `nama_lengkap_ibu`, `alamat_ayah`, `alamat_ibu`, `pekerjaan_ayah`, `pekerjaan_ibu`, `pendidikan_terakhir_ayah`, `pendidikan_terakhir_ibu`, `penghasilan_perbulan_ayah`, `penghasilan_perbulan_ibu`, `foto_diri`, `akta_kelahiran`, `kartu_keluarga`, `ktp_wali`, `ijazah_tk`) VALUES
-(28, 'test', 'Laki-laki', '2024-08-18 00:11:02', '2024-08-18 00:11:02', 'Diproses', 'test', 'test', '2024-08-18', 'Islam', 1, 1, 'Anak Kandung', 'test', '1234', 'test', 'test', 'test', 'test', 'test', 'testt', 'Pegawai Negeri', 'Ibu Rumah Tangga', 'S1', 'S1', 1234.00, 1234.00, 'foto_diri/1723965062_user.png', 'foto_diri/1723965062_akte.jpg', 'foto_diri/1723965062_kk.jpg', 'foto_diri/1723965062_ktp.png', 'foto_diri/1723965062_ijazahtk.png');
+(28, 'test', 'Laki-laki', '2024-08-18 00:11:02', '2024-09-07 23:33:53', 'Diterima', 'test', 'test', '2017-02-18', 'Islam', 1, 1, 'Anak Kandung', 'test', '1234', 'test', 'test', 'test', 'test', 'test', 'testt', 'Pegawai Negeri', 'Ibu Rumah Tangga', 'S1', 'S1', 1234.00, 1234.00, 'foto_diri/1723965062_user.png', 'foto_diri/1723965062_akte.jpg', 'foto_diri/1723965062_kk.jpg', 'foto_diri/1723965062_ktp.png', 'foto_diri/1723965062_ijazahtk.png');
 
 -- --------------------------------------------------------
 
@@ -817,13 +841,6 @@ CREATE TABLE `profile_sekolahs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `profile_sekolahs`
---
-
-INSERT INTO `profile_sekolahs` (`id`, `title`, `content`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'JUDUL PROFILE SEKOLAH', 'Isi Profile Sekolah', '1716632985_WhatsApp Image 2024-05-25 at 14.04.45 (1).jpeg', '2024-05-14 06:29:14', '2024-05-25 03:29:45');
 
 -- --------------------------------------------------------
 
@@ -1015,13 +1032,6 @@ CREATE TABLE `visimisis` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `visimisis`
---
-
-INSERT INTO `visimisis` (`id`, `visi`, `misi`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Ini isi VISI', 'Ini isi MISI', '1716632997_WhatsApp Image 2024-05-25 at 14.04.47 (2).jpeg', '2024-05-14 06:29:47', '2024-05-25 03:29:57');
 
 --
 -- Indexes for dumped tables
@@ -1300,7 +1310,7 @@ ALTER TABLE `visimisis`
 -- AUTO_INCREMENT untuk tabel `abouts`
 --
 ALTER TABLE `abouts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `authors`
@@ -1324,7 +1334,7 @@ ALTER TABLE `bank_accounts`
 -- AUTO_INCREMENT untuk tabel `beritas`
 --
 ALTER TABLE `beritas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `berkas_murids`
@@ -1360,7 +1370,7 @@ ALTER TABLE `data_jurusans`
 -- AUTO_INCREMENT untuk tabel `data_murids`
 --
 ALTER TABLE `data_murids`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_orang_tuas`
@@ -1378,7 +1388,7 @@ ALTER TABLE `detail_payment_spps`
 -- AUTO_INCREMENT untuk tabel `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -1396,7 +1406,7 @@ ALTER TABLE `footers`
 -- AUTO_INCREMENT untuk tabel `image_sliders`
 --
 ALTER TABLE `image_sliders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `jurusans`
@@ -1414,7 +1424,7 @@ ALTER TABLE `kategori_beritas`
 -- AUTO_INCREMENT untuk tabel `kegiatans`
 --
 ALTER TABLE `kegiatans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `members`
@@ -1486,7 +1496,7 @@ ALTER TABLE `spp_setting`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `users_details`
